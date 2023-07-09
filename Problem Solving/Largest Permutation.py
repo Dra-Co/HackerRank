@@ -21,11 +21,9 @@ def largestPermutation(k, arr):
     n = {j:i for i, j in arr.items()}
     for i in range(len(arr)):
         if arr[i] != len(arr)-i and k:
-            x = arr[i]
-            y = n[len(arr)-i]
+            n[arr[i]] = n[len(arr)-i]
+            arr[n[len(arr)-i]] = arr[i]
             arr[i] = len(arr)-i
-            arr[y] = x
-            n[x] = y
             k -= 1
     return list(arr.values())
 
