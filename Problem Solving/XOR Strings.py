@@ -5,7 +5,6 @@ def strings_xor(s, t):
             res += '0';
         else:
             res += '1';
-
     return res
 
 s = input()
