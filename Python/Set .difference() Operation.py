@@ -1,6 +1,4 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-x = input()
-a = set(input().split())
-y = input()
-b = set(input().split())
+_, a = input(), set(input().split())
+_, b= input(), set(input().split())
 print(len(a-b))
